@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>ì¹´ì¹´ì˜¤í†¡ ë²„íŠ¼ìžˆëŠ” ë©”ì‹œì§€ ì „ì†¡í•˜ê¸°</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>ì•„ëž˜ ì¹´ì¹´ì˜¤í†¡ ì•„ì´ì½˜ì„ ëˆŒëŸ¬ ì „ì†¡í•˜ì„¸ìš”</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('ìžë°”ìŠ¤í¬ë¦½íŠ¸ í‚¤');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: 'ì œëª©',
+        description: 'ì„¤ëª…',
+        imageUrl:
+          'ì‚¬ì§„ì£¼ì†Œ',
+        link: {
+          mobileWebUrl: 'ì‚¬ì§„í´ë¦­ì‹œ ëª¨ë°”ì¼ ì£¼ì†Œ',
+          webUrl: 'ì‚¬ì§„í´ë¦­ì‹œ PC ì£¼ì†Œ',
+        },
+      },
+      social: {
+        likeCount: ì¢‹ì•„ìš” ìˆ˜, //99999ê°€ ìµœëŒ€ìž…ë‹ˆë‹¤
+        commentCount: ëŒ“ê¸€ ìˆ˜, //99999ê°€ ìµœëŒ€ìž…ë‹ˆë‹¤
+        sharedCount: ê³µìœ  ìˆ˜, //99999ê°€ ìµœëŒ€ìž…ë‹ˆë‹¤
+      },
+      buttons: [
+        {
+          title: 'ë²„íŠ¼1 ê¸€ìž',
+          link: {
+            mobileWebUrl: 'í´ë¦­ì‹œ ëª¨ë°”ì¼ ì£¼ì†Œ',
+            webUrl: 'í´ë¦­ì‹œ PC ì£¼ì†Œ',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- ì´ë¯¸ì§€/ë²„íŠ¼ í´ë¦­ ì‹œ ì£¼ì†ŒëŠ” Kakao Developersì˜ ì• í”Œë¦¬ì¼€ì´ì…˜ > í”Œëž«í¼ > Webì— ë„£ì–´ì•¼ í´ë¦­í–ˆì„ë•Œ ì„±ê³µì ìœ¼ë¡œ í‘œì‹œë©ë‹ˆë‹¤ -->
+  </body>
+</html>
