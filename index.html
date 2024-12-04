@@ -13,32 +13,10 @@
 <script type="text/javascript">
  Kakao.init('372573dd76b819fbb628e8f73c6539bb');
   function sendLink() {
-    Kakao.Link.sendDefault({
-      objectType: 'feed',
-      content: {
-        title: '오픈프로필 만들기',
-        description: '',
-        imageUrl:
-          'ì‚¬ì§„ì£¼ì†Œ',
-        link: {
-          mobileWebUrl: 'https://directurl.kro.kr?url=kakaoopen://card/create',
-          webUrl: 'https://directurl.kro.kr?url=kakaoopen://card/create',
-        },
-      },
-      social: {
-        likeCount: 9, //99999ê°€ ìµœëŒ€ìž…ë‹ˆë‹¤
-        commentCount: 1, //99999ê°€ ìµœëŒ€ìž…ë‹ˆë‹¤
-        sharedCount: 1, //99999ê°€ ìµœëŒ€ìž…ë‹ˆë‹¤
-      },
-      buttons: [
-        {
-          title: '만들기',
-          link: {
-            mobileWebUrl: 'directurl.kro.kr?url=kakaoopen://card/create',
-            webUrl: 'directurl.kro.kr?url=kakaoopen://card/create',
-          },
-        },
-      ],
+    Kakao.Link.sendCustom({
+        templateId: 114939,   // 복사해둔 템플릿 ID
+        templateArgs: {
+  }
     })
   }
 </script>
