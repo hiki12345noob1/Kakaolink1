@@ -1,26 +1,65 @@
+
 <html>
 <head>
-<title>ì¹´ì¹´ì˜¤í†¡ ë²„íŠ¼ìžˆëŠ” ë©”ì‹œì§€ ì „ì†¡í•˜ê¸°</title>
-<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>카톡 공유</title>
+<script type="text/JavaScript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 </head>
 <body>
-<p><strong>ì•„ëž˜ ì¹´ì¹´ì˜¤í†¡ ì•„ì´ì½˜ì„ ëˆŒëŸ¬ ì „ì†¡í•˜ì„¸ìš”</strong> By. Blackcats4567</p>
-<a id="kakao-link-btn" href="javascript:sendLink()">
-  <img
-    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
-  />
-</a>
+    <input type="button" onClick="sendLinkCustom();" value="Custom"/>
+    <input type="button" onClick="sendLinkDefault();" value="Default"/>
+
 <script type="text/javascript">
- Kakao.init('372573dd76b819fbb628e8f73c6539bb');
-  function sendLink() {
-    Kakao.Link.sendCustom({
-        templateId: 104230,   // 복사해둔 템플릿 ID
-        templateArgs: {
-  }
+    function sendLinkCustom() {
+        Kakao.init([372573dd76b819fbb628e8f73c6539bb]");
+        Kakao.Link.sendCustom({
+            templateId: [104230]
+        });
+    }
+</script>
+
+<script>
+try {
+  function sendLinkDefault() {
+    Kakao.init('[Javascript API key]')
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '딸기 치즈 케익',
+        description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
+        imageUrl:
+          'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+        link: {
+          mobileWebUrl: 'https://developers.kakao.com',
+          webUrl: 'https://developers.kakao.com',
+        },
+      },
+      social: {
+        likeCount: 286,
+        commentCount: 45,
+        sharedCount: 845,
+      },
+      buttons: [
+        {
+          title: '웹으로 보기',
+          link: {
+            mobileWebUrl: 'https://developers.kakao.com',
+            webUrl: 'https://developers.kakao.com',
+          },
+        },
+        {
+          title: '앱으로 보기',
+          link: {
+            mobileWebUrl: 'https://developers.kakao.com',
+            webUrl: 'https://developers.kakao.com',
+          },
+        },
+      ],
     })
   }
+; window.kakaoDemoCallback && window.kakaoDemoCallback() }
+catch(e) { window.kakaoDemoException && window.kakaoDemoException(e) }
 </script>
-<!-- www.blackcats4567.com -->
-<!-- ì´ë¯¸ì§€/ë²„íŠ¼ í´ë¦­ ì‹œ ì£¼ì†ŒëŠ” Kakao Developersì˜ ì• í”Œë¦¬ì¼€ì´ì…˜ > í”Œëž«í¼ > Webì— ë„£ì–´ì•¼ í´ë¦­í–ˆì„ë•Œ ì„±ê³µì ìœ¼ë¡œ í‘œì‹œë©ë‹ˆë‹¤ -->
-  </body>
+   
+</body>
 </html>
